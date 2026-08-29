@@ -26,7 +26,7 @@ export function unstableKeys(caches, minEntries = 5) {
 
 async function main() {
   const repo = process.argv[process.argv.indexOf('--repo') + 1];
-  const token = (process.env.GITHUB_TOKEN || "dummy-github-token");
+  const token = (process.env.GITHUB_TOKEN || "");
   if (!token) { console.error('set GITHUB_TOKEN'); process.exit(2); }
 
   const res = await fetch(`${API}/repos/${repo}/actions/caches?per_page=100`, {
