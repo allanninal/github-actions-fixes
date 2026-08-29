@@ -8,7 +8,6 @@ By **[Allan Niñal](https://github.com/allanninal)** — AI Solutions Engineer. 
 Full write ups with diagrams for each fix live at **[allanninal.dev/ci](https://www.allanninal.dev/ci/)**.
 
 [![Follow on GitHub](https://img.shields.io/github/followers/allanninal?label=Follow%20%40allanninal&style=social)](https://github.com/allanninal)
-[![Tests](https://github.com/allanninal/github-actions-fixes/actions/workflows/tests.yml/badge.svg)](https://github.com/allanninal/github-actions-fixes/actions/workflows/tests.yml)
 
 ## The fixes
 
@@ -20,6 +19,16 @@ Full write ups with diagrams for each fix live at **[allanninal.dev/ci](https://
 ## How to run one
 
 Each folder holds the same script in Python and in Node.js, plus its test. Set the environment variables named in that folder's README, keep `DRY_RUN=true` for the first pass, and read what it reports before letting it write.
+
+## Tests
+
+Every fix ships with its test. Run them locally:
+
+```bash
+pip install pytest requests
+pytest -q
+node --test
+```
 
 ## License
 
